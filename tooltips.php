@@ -1,5 +1,4 @@
 <?php
-
 include('simple_html_dom.php');
 
 $tag = $_GET['tag'];
@@ -7,11 +6,16 @@ $tag = $_GET['tag'];
 $filename = getcwd() . "/cache/" . $tag;
 
 if (file_exists($filename)) {
-   $lastmoddate = filemtime($filename);
+	if (filesize($filename) > 0)
+	{
+	    $lastmoddate = filemtime($filename);
+	} else {
+	    $lastmoddate = 0;
+	}
 } else {
    $fh = fopen($filename, 'w') or die("can't open file");
    fclose($fh);
-   $lastmoddate = time() - 172800;
+   $lastmoddate = 0;
 }
 
 if ($lastmoddate < (time() - 86400)) {
