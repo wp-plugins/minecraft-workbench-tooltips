@@ -12,6 +12,10 @@ color: #999999;
 width: 350px;
 }
 
+div.mcwbtooltip p {
+color: #999999 !important;
+}
+
 div.mcwbpadder {
 background: transparent url(../images/logo.png) no-repeat scroll top right;
 padding: 8px;
