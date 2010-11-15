@@ -1,4 +1,5 @@
 <?php
+
 include('simple_html_dom.php');
 
 $tag = $_GET['tag'];
@@ -19,7 +20,7 @@ if (file_exists($filename)) {
 }
 
 if ($lastmoddate < (time() - 86400)) {
-    $html = file_get_html('http://minecraftwb.com/index.php/game-database/'.str_replace("_","/", $tag));
+    $html = file_get_html('http://minecraftwb.com/index.php/item-db/'.str_replace("_","/", $tag));
     $htmlcode = str_replace("<h3>Description</h3>","<br clear='all'/><br/>",$htmlcode);
 
     foreach($html->find('div.floatbox') as $e) {
@@ -36,6 +37,7 @@ if ($lastmoddate < (time() - 86400)) {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $img);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
 		$contents = curl_exec ($ch);
 		curl_close ($ch);
 

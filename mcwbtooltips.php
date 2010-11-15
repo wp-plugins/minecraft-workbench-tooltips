@@ -4,7 +4,7 @@ Plugin Name: Minecraft Workbench Item Tooltips
 Plugin URI: http://wordpress.org/#
 Description: Turns links to MinecraftWB item pages into info tooltips. 
 Author: Jaco Gerber
-Version: 0.1
+Version: 0.1.1
 Author URI: http://www.minecraftwb.com/
 */
 

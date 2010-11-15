@@ -24,11 +24,14 @@ The "cache" directory needs to be writable by the web process, which should be t
 
 == Screenshots ==
 
-1. After locating the item's url on http://www.minecraftwb.com/ - link to it using an ordinary hyperlink.
+1. After locating the item's url on http://minecraftwb.com/ - link to it using an ordinary hyperlink.
 2. Moooo!
 3. Noooo!
 
 == Changelog ==
+
+= 0.1.1 =
+Fixed to work with new MCWB site.
 
 = 0.1 =
 First release.

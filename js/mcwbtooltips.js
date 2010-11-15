@@ -2,7 +2,7 @@ jQuery(document).ready(function () {
 
 jQuery("a[href*=minecraftwb]").each(function () {
 var href = jQuery(this).attr("href");
-var hrefsplit = href.split("game-database/");
+var hrefsplit = href.split("item-db/");
 if (hrefsplit.length > 1) {
 var tag = hrefsplit[1].replace(/\//g,'_');
 jQuery(this).addClass(tag);
